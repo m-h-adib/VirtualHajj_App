@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <FrameLayout
+        android:layout_marginBottom="60dp"
+        android:id="@+id/your_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <android.support.design.widget.BottomNavigationView
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:id="@+id/bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="@id/all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_main"
+        style="@style/BottomNavigation"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

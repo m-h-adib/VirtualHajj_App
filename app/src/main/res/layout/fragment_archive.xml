@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    tools:context=".ArchiveFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/manasek"
+                android:src="@drawable/manasek"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/asrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/asrar" />
+
+
+            <LinearLayout
+                android:weightSum="2.54"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/akhlagh"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/akhlagh"
+                    android:layout_weight="1.54"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/behdasht"
+                    android:layout_weight="1"
+                    android:src="@drawable/behdasht"
+                    android:adjustViewBounds="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/tarikh"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tarikh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/sabk"
+                    android:layout_weight="1"
+                    android:src="@drawable/sabk"
+                    android:adjustViewBounds="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/tafsir"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tafsir"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/ejrai"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ejrai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/kalam"
+                android:src="@drawable/kalam"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/siasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/siasi" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".CompetitionFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<TextView-->
+            <!--android:textAlignment="center"-->
+            <!--android:textStyle="bold|italic"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="در این بخش سوالات و مسابقات مختلفی در موسم حج و قبل و بعد از حج برگزار خواهد شد. همچنین جوایزی به قید قرعه به برندگان اهدا خواهد شد." />-->
+
+
+            <!--<TextView-->
+            <!--android:textAlignment="center"-->
+            <!--android:textStyle="bold|italic"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="مسابقات در قالب های مختلف ارائه می شود و شرکت کنندگان از همین نرم افزار سوالات را مشاهده کرده و جواب می دهند و نتیجه را با درج رتبه و نمره و نمودار دریافت خواهند کرد" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/add"-->
+            <!--android:textStyle="bold"-->
+            <!--android:foreground="?android:attr/selectableItemBackground"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:text="شرکت در مسابقه"-->
+            <!--android:background="@color/c1_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <LinearLayout
+                android:id="@+id/count_bx"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="تعداد سوالات پاسخ داده شما: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/count"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/score_box"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="مجموع امتیاز شما: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/score"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sep"
+                android:background="#3F3F40"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></View>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/empty"
+                android:text="مسابقه جدیدی برای امروز تعریف نشده است"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/login"
+                android:textColor="#ffffff"
+                android:text="جهت شرکت در مسابقه ابتدا وارد شوید"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/ok"
+                android:textColor="#ffffff"
+                android:text="ثبت و ارسال"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

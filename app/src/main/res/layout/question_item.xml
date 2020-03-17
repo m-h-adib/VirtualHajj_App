@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:textDirection="rtl"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:background="#dddddd"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/code"
+        android:padding="10dp"
+        android:text="کد سوال: #10023"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/date"
+        android:text="21 شهریور 1397"
+        android:layout_width="0dp"
+        android:layout_weight="1.3"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/reply"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:text="پاسخ"
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="wrap_content" />
+</LinearLayout>

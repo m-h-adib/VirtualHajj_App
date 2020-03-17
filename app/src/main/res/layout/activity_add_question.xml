@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    tools:context=".AddQuestion">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/activity_add_question">
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="گروه سوال: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_marginTop="10dp"
+                android:layoutDirection="rtl"
+                android:textDirection="rtl"
+                android:id="@+id/groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"></android.support.v7.widget.AppCompatSpinner>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="متن سوال: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:id="@+id/ques"
+                android:layout_marginTop="10dp"
+                android:lines="8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></LinearLayout>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="ثبت سوال"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

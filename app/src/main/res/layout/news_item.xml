@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#dddddd"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/d1"
+                    android:background="@drawable/side_nav_bar"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingLeft="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="30dp"
+                    android:orientation="vertical"
+                    android:layout_weight="2.2"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp">
+                    <TextView
+                        android:id="@+id/Group"
+                        android:textColor="#222222"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="صدقه/کمک به نیازمندان"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    
+                    <LinearLayout
+                        android:id="@+id/d3"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="150dp"
+                        android:layout_height="2.5dp"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/d4"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_radio_button_checked_black_24dp"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp" />
+                        <TextView
+                            android:id="@+id/Title"
+                            android:text="پرداخت صدقه روزانه و کمک نقدی به نیازمندان"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/Pic"
+                android:src="@drawable/a1"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="110dp"
+                android:layout_width="110dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/d2"
+                android:background="@drawable/side_nav_bar"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_width="40dp"
+                android:layout_height="110dp"></LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

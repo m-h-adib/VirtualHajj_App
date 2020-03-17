@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></LinearLayout>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="بستن"
+        android:background="@color/c1_1"
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

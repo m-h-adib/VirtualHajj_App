@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ShowPost"
+    android:layoutDirection="rtl"
+    tools:showIn="@layout/activity_show_post">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5sp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@android:drawable/ic_menu_share"
+                        android:id="@+id/share" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="left"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/mines"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/mines" />
+                    <ImageView
+                        android:id="@+id/plus"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/plus" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:orientation="vertical"
+                android:textDirection="rtl">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:text="عنوان"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textDirection="anyRtl" />
+
+                <TextView
+                    android:layout_marginTop="5sp"
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="دسته" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/video_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            app:contentPadding="5sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="فیلم"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/red"></LinearLayout>
+                <VideoView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/audio_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            app:contentPadding="5sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="صوت"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/red">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timerDisplay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+                    <!-- Current Duration Label -->
+                    <TextView
+                        android:id="@+id/songCurrentDurationLabel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                    <!-- Total Duration Label -->
+                    <TextView
+                        android:id="@+id/songTotalDurationLabel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <!-- Progress Bar/Seek bar -->
+                <SeekBar
+                    android:id="@+id/songProgressBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"/>
+
+                <!-- Player Footer -->
+                <LinearLayout
+                    android:layout_marginTop="10sp"
+                    android:background="#cccccc"
+                    android:id="@+id/player_footer_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:layout_marginBottom="10sp">
+
+                    <!-- Player Buttons -->
+                    <LinearLayout
+                        android:weightSum="5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <!-- forweard Button -->
+                        <ImageButton
+                            android:layout_marginLeft="5sp"
+                            android:layout_weight="1"
+                            android:id="@+id/btnBackward"
+                            android:src="@drawable/forward"
+                            android:scaleType="fitCenter"
+                            android:layout_width="70sp"
+                            android:layout_height="70sp"
+                            android:background="@null"/>
+                        <!-- Play Button -->
+                        <ImageButton
+                            android:scaleType="fitCenter"
+                            android:layout_weight="3"
+                            android:id="@+id/btnPlay"
+                            android:src="@drawable/play"
+                            android:layout_width="100sp"
+                            android:layout_height="100sp"
+                            android:background="@null"/>
+                        <!-- backwaerd Button -->
+                        <ImageButton
+                            android:layout_marginRight="5sp"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="1"
+                            android:id="@+id/btnForward"
+                            android:src="@drawable/backward"
+                            android:layout_width="70sp"
+                            android:layout_height="70sp"
+                            android:background="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/text_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            app:contentPadding="5sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="متن"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/red"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

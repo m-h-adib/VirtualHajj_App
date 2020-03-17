@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:textDirection="rtl"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#252525"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></View>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/ch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/ch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/ch3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/ch4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
